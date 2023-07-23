@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People List</title>
+</head>
+    <body>
+        <h1>User List</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Mobile Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (const user of users) { %>
+            <tr>
+            <td><%= user.Name %></td>
+            <td><%= user.Age %></td>
+            <td><%= user.Gender %></td>
+            <td><%= user.MobileNumber %></td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <form action="/person" method="POST">
+        <label for="name">First name:</label><br>
+        <input type="text" id="name" name="Name"><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="Age"><br>
+        <label for="gender">Gender:</label><br>
+        <input type="text" id="gender" name="Gender"><br>
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="text" id="mobile" name="MobileNumber"><br>
+        <input type="submit" value="Submit">
+      </form>
+      <!-- <button class="sumit-button">Submit</button> -->
+
+</body>
+</html>

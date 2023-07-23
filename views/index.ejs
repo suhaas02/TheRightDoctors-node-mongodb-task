@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User List</title>
+</head>
+<body>
+  <h1>User List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Mobile Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const user of users) { %>
+        <tr>
+          <td><%= user.Name %></td>
+          <td><%= user.Age %></td>
+          <td><%= user.Gender %></td>
+          <td><%= user.MobileNumber %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
